@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(226deg, 43%, 10%);
+  font-family: "Rubik";
+  color: #fff;
+}
+
+.dashboard {
+  min-height: 100vh;
+  padding: 4rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard__content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  grid-template-columns: repeat(1, minmax(300px, 330px));
+}
+.dashboard__person {
+  width: 100%;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+}
+.dashboard__person .info-card {
+  background-color: hsl(246deg, 80%, 60%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 2rem;
+}
+.dashboard__person .info-card__photo {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.dashboard__person .info-card__subtitle {
+  font-weight: 300;
+}
+.dashboard__person .info-card__title {
+  font-weight: 300;
+  margin: 0.5rem 0 0;
+}
+.dashboard__person .view-selector {
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard__person .view-selector__item {
+  font-size: 12px;
+  color: hsl(236deg, 100%, 87%);
+  cursor: pointer;
+}
+.dashboard__person .view-selector__item:hover {
+  color: #fff;
+}
+.dashboard__item {
+  width: 100%;
+  padding-top: 2.15rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: 92% -8%;
+}
+.dashboard__item--work {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+}
+.dashboard__item--play {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+}
+.dashboard__item--study {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+}
+.dashboard__item--exercise {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+}
+.dashboard__item--social {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+}
+.dashboard__item--self-care {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+}
+.dashboard .tracking-card {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  bottom: -4px;
+}
+.dashboard .tracking-card__header, .dashboard .tracking-card__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .tracking-card__menu {
+  cursor: pointer;
+}
+.dashboard .tracking-card__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+.dashboard .tracking-card__time {
+  font-size: 32px;
+  font-weight: 300;
+}
+.dashboard .tracking-card__prev-period {
+  font-size: 12px;
+  font-weight: 300;
+}
+.dashboard .tracking-card:hover {
+  background-color: hsl(246deg, 80%, 60%);
+}
+
+@media (min-width: 1024px) {
+  .dashboard__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .dashboard__person {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 100%;
+  }
+  .dashboard .info-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+  .dashboard .info-card__photo {
+    margin-bottom: 1.5rem;
+  }
+  .dashboard .info-card__title {
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .dashboard .view-selector {
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .dashboard .view-selector__item {
+    margin-top: 0.5rem;
+  }
+  .dashboard .view-selector__item:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+  .dashboard .tracking-card__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard .tracking-card__time {
+    margin-bottom: 0.75rem;
+    font-size: 40px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
